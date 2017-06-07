@@ -102,32 +102,32 @@
 
 - A method with no return value
   - hvis det er en metode som arbejder på en dependency så kunne vi mock dependencien og give den med som argument, og derved kunne vi med hjælp af mockito tjekke om metoden kalder dependenciens metoder det rigtige antal gange osv. det ville se således ud:
-    ```
-    public class Foo{
-      private BarFactory barFactory;
-      
-      public Foo(BarFactory factory){
-      this.barFactory = factory;
-      
-      public void foo(){
-        Bar bar = this.barFactory.createBar();
-        bar.someMethod();
-      }
-    }
-    
-    @Test
-    public void testDoFoo(){
-      Bar bar = mock(Bar.class);
-      BarFactory myFactory = new BarFactory(){
-        public void createBar(){return bar;}
-      };
-      
-      Foo foo = new Foo(myFactory);
-      foo.foo();
-      
-      verify(bar, times(1)).someMethod();
-    }
-    ```
+
+public class Foo{
+  private BarFactory barFactory;
+
+  public Foo(BarFactory factory){
+  this.barFactory = factory;
+
+  public void foo(){
+    Bar bar = this.barFactory.createBar();
+    bar.someMethod();
+  }
+}
+
+@Test
+public void testDoFoo(){
+  Bar bar = mock(Bar.class);
+  BarFactory myFactory = new BarFactory(){
+    public void createBar(){return bar;}
+  };
+
+  Foo foo = new Foo(myFactory);
+  foo.foo();
+
+  verify(bar, times(1)).someMethod();
+}
+
     
   - ellers kan vi tjekke på objektets state (state behaviour). det kan vi gøre ved at tjekke 
 - A dependency method with required inputs and no return value
