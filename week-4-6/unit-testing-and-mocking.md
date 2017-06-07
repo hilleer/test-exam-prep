@@ -118,15 +118,17 @@
 
     @Test
     public void testDoFoo(){
-      Bar bar = mock(Bar.class);
-      BarFactory myFactory = new BarFactory(){
-        public void createBar(){return bar;}
-      };
+        Bar bar = mock(Bar.class);
+        BarFactory myFactory = new BarFactory(){
+        
+            public void createBar(){return bar;}
+        
+        };
 
-      Foo foo = new Foo(myFactory);
-      foo.foo();
+        Foo foo = new Foo(myFactory);
+        foo.foo();
 
-      verify(bar, times(1)).someMethod();
+        verify(bar, times(1)).someMethod();
 
     }
 
