@@ -103,7 +103,8 @@
 - A method with no return value
   - hvis det er en metode som arbejder på en dependency så kunne vi mock dependencien og give den med som argument, og derved kunne vi med hjælp af mockito tjekke om metoden kalder dependenciens metoder det rigtige antal gange osv. det ville se således ud:
     
-    ![behaviour example](/week-4-6/image.png)
+![behaviour example](/week-4-6/image.png)
+    
   - ellers kan vi tjekke på objektets state (state behaviour). det kan vi gøre ved at tjekke 
 - A dependency method with required inputs and no return value
 - Exceptional behaviour
