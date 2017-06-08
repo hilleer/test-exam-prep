@@ -104,56 +104,90 @@
   - hvis det er en metode som arbejder på en dependency så kunne vi mock dependencien og give den med som argument, og derved kunne vi med hjælp af mockito tjekke om metoden kalder dependenciens metoder det rigtige antal gange osv. det ville se således ud:
 
     public class Foo{
+      private Bar bar;
 
-      private BarFactory barFactory;
-
-      public Foo(BarFactory factory){
-      this.barFactory = factory;
-
+      public Foo(Bar bar){
+        this.bar = bar;
+      }
+      
       public void foo(){
-        Bar bar = this.barFactory.createBar();
         bar.someMethod();
       }
     }
 
     @Test
     public void testDoFoo(){
-        Bar bar = mock(Bar.class);
-        BarFactory myFactory = new BarFactory(){
-        
-            public void createBar(){return bar;}
-        
-        };
+      Bar bar = mock(Bar.class);
 
-        Foo foo = new Foo(myFactory);
-        foo.foo();
+      Foo foo = new Foo(bar);
+      foo.foo();
 
-        verify(bar, times(1)).someMethod();
-
+      verify(bar, times(1)).someMethod();
     }
 
-    
-  - ellers kan vi tjekke på objektets state (state behaviour). det kan vi gøre ved at tjekke 
+  - ellers kan vi tjekke på objektets state (state). altså om objektet har ændret sig. det kan være alt fra en arrayliste der er blevet større til om at en variable er blevet opdateret.
+  
 - A dependency method with required inputs and no return value
+  - det ovenstående eksempel behaviour kan bruges.
 - Exceptional behaviour
+  - en test der smider en exception
+    - @Test(expected=IndexOutOfBoundsException.class)
+      public void testIndexOutOfBoundsException() {
+        ArrayList emptyList = new ArrayList();
+        Object o = emptyList.get(0);
+      }
+      
 - A Single method, with multiple input values (and corresponding expected results)
-- A test with dependencies of other classes
+  - til denne opgave skal vi bruge paramatized tests og det kan gøres på følgende måde:
+      @RunWith(Parameterized.class)
+      public class testClass{
+        String input;
+        String expResult;
+        
+        @Parameterized.Parameters
+        public static Collection primeNumbers() {
+          return Arrays.asList(new Object[][]{{"input1","result1},{"input2","result2"}{"inputN","resultN"}});
+        }
+        
+        public testClass(String input, String expResult){
+          this.input = input;
+          this.expResult = expResult;
+        }
+        
+        //denne test ville køre lige så mange gange som der er input værdier
+        @Test
+        public void test1(){
+          boolean result = testObject.testMethod(input);
+          assertTrue(result == expResult);
+        }
+      }
+      
 
+- A test with dependencies of other classes
+  - det gøres ved at sikre sig at have en ordentlig injection, for så kan vi mocke classen væk og derved sikre os at det er en unit test. brug eksemplet fra det første spørgsmål("A method with no return value")
 
 - Explain using an example how to do Data Driven Unit testing (read data from external sources)
-
+  - ved hjælp af JUnitParams og en csv fuld med den rette data kan vi bare gøre følgende:
+    @Test
+    @FileParameters("PathToCsv")
+    public void testWithCsv(int colonne1, int colonne2, int resColonne){
+      int result = colonne1 + colonne2;
+      AssertTrue(result==resColonne);
+    }
 
 - Explain basically about the architecture in JUnit 5.X, how to set up a project for JUnit 5.X testing and provide a few examples to demonstrate some of the new features.
+  -
 
 
 - Demonstrate, preferably using a real life example, ways to handle many input values, and expected values
-
+  - https://github.com/lalelarsen/TestStudypointExercise3CodeCoverage/blob/master/src/test/java/exercise/teststudypointexercise3codecoverage/ReibursmentTest.java
 
 - Explain how to setup a Java Project to use JUnit and Mockito and provide examples, using exercises given throughout the semester, for how to use the framework.
-
+  - vis mockito opgave. opgave 5 tror jeg...
 
 - The textbook "JUnit in action" list a number of best practices for how to write testable code. Explain a number of these (feel free to include other), providing code examples to support your arguments.
-
+  - se svarene til spørgsmålet "Explain a few rules of what makes a good Unit test, and rules for what makes code testable (or untestable)."
+  - vis mockito opgaven
 --- 
 
 **_Demonstrate your solution to the study point exercise "Unit testing"._**
