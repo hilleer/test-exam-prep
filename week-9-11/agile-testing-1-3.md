@@ -113,17 +113,44 @@ _Source: Gitte Ottosen presentation; Elizabeth Hendrickson_
 
 I et agilt projekt tester man løbende gennem iterationerne - det er ikke noget der bliver "færdigt", men noget der fortsætter så længe man tilføjer kode til systemet - måske også efter. 
 
-Det vil sige, at man starter med at teste fra projektets "start" til "slut". Grunden til, at tester tidligt i projektet er, at det er langt billigere at rette bugs og fejl der når de opstår, end at rette dem senere, hvis man ikke lavede testene dér så tidligt, som fandt dem. 
+Det vil sige, at man tester fra projektets "start" til "slut". Grunden til, at tester tidligt i projektet er, at det er langt billigere at rette bugs og fejl der når de opstår, end at rette dem senere, hvis man ikke lavede testene dér så tidligt, som fandt dem. 
+
+**Ydereligere**: 
+
+* Testene skal integreres ind i udviklingsprocessen således, at det ikke er en separat fase, men mere en fortsættende aktivitet af et agilt team. 
+* Testene skal være med til, at sikre/optimere produktets kvalitet, og er ikke blot en "safety line", som skal sikre systemet inden det implementeres. 
+
+Test automatisering på alle niveauer. 
+
+Gå [dette](https://drive.google.com/file/d/0B-vk4h180fJfQ1ctNTJ0N0xpSWs/view) slide igennem inden eksamen, det er ikke særlig langt, men ret godt. 
+
+Eventuelt også [dette](https://drive.google.com/file/d/0B-vk4h180fJfaUw0aUt5VTg0RDQ/view) fra en ekstern lecturer. 
 
 ---
 
 - Explain how risk is coped with in agile project as compared to traditional approaches
+
+
+
+---
+
 - Explain the roles and skills of a tester in agile projects
+
+Kvaliteten af produktet (testene) er hele teamets answer - der er ikke defineret nogen decideret test ansvarlige, men i stedet er alle blot "udviklere", som også har ansvaret for at skrivene softwarens tests. 
+
+På trods af dette, har man alligevel en "tester" med på det agile hold. Formålet hertil er, at dette skal forbedre kvaliteten. Der er dog ikke nogen decideret test rolle, og derfor er det testerens ansvar, at være med til at skabe sin egen rolle i det agile team. 
+
+Testeren får dog en rolle i, at skulle være med til at forbedre kvaliteten. De skal være fortaler for kunden, under udviklingsprocessen således, at udviklerne opfylder deres kvalitetskrav. 
+
+---
+
 - Explain agile development and testing in the context of the Agile Manifesto’s 4 statements of values
 	- Individuals and interactions 	over processes and tools 
 	- Working software 		over comprehensive documentation 
 	- Customer collaboration 		over contract negotiation 
 	- Responding to change 		over following a plan
+
+---
 
 - Explain the Agile Testing Quadrants:
 
