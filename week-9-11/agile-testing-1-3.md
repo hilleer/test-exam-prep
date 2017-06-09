@@ -37,7 +37,13 @@ Dette gøres (som regel) ved brug af en bygge server, for eksempel Travis. Bygge
 
 - Explain why Maven (or similar tools) is a "great" match for CI via a Build Server, and elaborate on the properties we can take advantage of.
 
+Maven er bygget til, at køre alle ens automatiserede test og generere test rapporter. Da test er yderst relevant for, at CI kan fungere, går disse to ting rigtig godt hånd i hånd. 
 
+`Maven-surefire-plugin` er designet til, at køre unit tests og fejle buildet med det samme, hvis en eller flere af testene fejler. 
+
+`maven-failsafe-plugin` er designet til, at køre integration tests og afkobler at fejle buildet, hvis der er test fejl fra tests som rent faktisk kører. 
+
+---
 
 - Explain how to use separate test phases for Unit Tests and Integration Tests with Maven.
 - Demonstrate CI, using Travis (or a similar build server), on a system involving, as a minimum:

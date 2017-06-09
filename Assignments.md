@@ -1,5 +1,7 @@
 # Assignments
 
+Alle afleveringer kan findes her: [Handin sheet](https://docs.google.com/spreadsheets/d/1Nh9YRJoiveqmA5pPz7GwUQ9-1BYB8yBhN9f_CcqnBkw/edit#gid=0)
+
 ## Exercise 1 - Static testing techniques
 
 [Static testing techniques](https://docs.google.com/document/d/1gcnjTlcR2KW-TSFSNJ3l98nwvz9MfvCyScQ03aURNB4/edit)
