@@ -80,7 +80,37 @@ TTD hjælper også med, at abstrahere over usecasen på det absolut minimale niv
 --- 
 
 - Explain how agile development and testing differ from traditional approaches
+
+Man bevæger sig mod en tilstand, hvor man går mere op i rent faktisk at levere software, fremfor, at følge alle mulige forskellige principper. Man bevæger sig væk fra 
+
+1. Processer og værktøjer
+2. En omfattende dokumentation
+3. Kontrakt forhandlinger
+4. At følge en forudbestemt plan. 
+
+I stedet for, bevæger man sig mod et mere løst alternativ: 
+
+1. &rarr; Enkeltpersoner og interaktioner.
+2. &rarr; Software der fungerer.
+3. &rarr; Samarbejde med kunden.
+4. &rarr; At kunne reagerer på ændringer undervejs. 
+
+Man bevæger sig altså i stedet mod nogle andre fokusområder, som har til formål, at give et bedre slutresultat. For at opnå dette, er man løbende i kontakt og dialog med kunden, således at man kan få feedback og derigennem forbedre resultatet og hurtigere levere dét som giver forretningsmæssige fordele. Ved at bruge gennemgående test, skal man sikre bedre kvalitet af softwaren. 
+
+![](/week-9-11/traditional-versus-agile-projects.PNG)
+
+_Source: Gitte Ottosen presentation; Elizabeth Hendrickson_
+
+---
+
 - Explain the test activities in agile projects, including when which test activities are initiated
+
+I et agilt projekt tester man løbende gennem iterationerne - det er ikke noget der bliver "færdigt", men noget der fortsætter så længe man tilføjer kode til systemet - måske også efter. 
+
+Det vil sige, at man starter med at teste fra projektets "start" til "slut". Grunden til, at tester tidligt i projektet er, at det er langt billigere at rette bugs og fejl der når de opstår, end at rette dem senere, hvis man ikke lavede testene dér så tidligt, som fandt dem. 
+
+---
+
 - Explain how risk is coped with in agile project as compared to traditional approaches
 - Explain the roles and skills of a tester in agile projects
 - Explain agile development and testing in the context of the Agile Manifesto’s 4 statements of values
