@@ -11,7 +11,7 @@
 
 ## Exercise 3 - Unit testing 1
 
-[Unit testing 1](https://docs.google.com/document/d/1UYoyKbyrRM9OqUGdT)
+[Unit testing 1](https://docs.google.com/document/d/1UYoyKbyrRM9OqUGdT0GZgomvzHhewg4k8EEqzU6R-6Q/edit)
 
 
 ## Exercise 4 - Junit day 2 study point exercise (testing real life code)

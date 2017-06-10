@@ -146,7 +146,10 @@ Testeren får dog en rolle i, at skulle være med til at forbedre kvaliteten. De
 
 - Explain agile development and testing in the context of the Agile Manifesto’s 4 statements of values
 	- Individuals and interactions 	over processes and tools 
-	- Working software 		over comprehensive documentation 
+	- Working software 		over comprehensive documentation.
+	
+		* At have en lang og omfattende dokumentation for ens produkt, skaber ikke rigtig nogen forretningsmæssige værdier. Det gør en god software løsning tilgengæld, som jo i bund og grund er det, som man efterspørger ved udviklingen af sit produkt. 
+
 	- Customer collaboration 		over contract negotiation 
 	- Responding to change 		over following a plan
 
