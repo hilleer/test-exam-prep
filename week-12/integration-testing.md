@@ -79,6 +79,11 @@ Incremental testing
 - You should (as a minimum):
 
 	- Explain the most important implications involved in performing integration tests that involve databases
+	 A good test is self-sufficient and creates all the data it needs.
+	You can make a setup method that all database tests call to put the DB in a known state
+	Måske ikke bruge PROD DB men IN-MEMORY
+	
+	
 	- Explain the purpose and some of the key features of DBUnit
 	**DBUnit is JUnit extension for database testing**
  - Import and export data as XML datasets
